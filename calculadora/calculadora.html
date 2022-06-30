@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="css/calculadora.css">
+    <script type="text/javascript" src="js/calculadora.js"></script>
+</head>
+<body>
+<form name="calculator">
+    <h3>Calculadora</h3>
+    <p>Haz algun calculo para ver el resultado.</p>
+    <input type="textfield" name="textfield" id="textfield" value="">
+    <br>
+    <input type="button" id="Button1" value="1" onClick="displayNumbers(1)">
+    <input type="button" id="Button2" value="2" onClick="displayNumbers(2)">
+    <input type="button" id="Button3" value="3" onClick="displayNumbers(3)">
+    <input type="button" id="Sum" value="+" onClick="operator('+')">
+    <br>
+    <input type="button" id="Button4" value="4" onClick="displayNumbers(4)">
+    <input type="button" id="Button5" value="5" onClick="displayNumbers(5)">
+    <input type="button" id="Button6" value="6" onClick="displayNumbers(6)">
+    <input type="button" id="Rest" value="-" onClick="operator('-')">
+    <br>
+    <input type="button" id="Button7" value="7" onClick="displayNumbers(7)">
+    <input type="button" id="Button8" value="8" onClick="displayNumbers(8)">
+    <input type="button" id="Button9" value="9" onClick="displayNumbers(9)">
+    <input type="button" id="Multiplication" value="*" onClick="operator('*')">
+    <br>
+    <input type="button" id="Button0" value="0" onClick="displayNumbers(0)">
+    <input type="reset" value="c" onClick="erracer()">
+    <input type="button" value="." onClick="displayNumbers('.')">
+    <input type="button" value="/" onClick="operator('/')">
+    <br>
+    <input type="button" id="iqual" style="width: 300px" value="=" onClick="result()">
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // Math.random() devuelve numeros aleatorios entre 0 y 1.
+
+        var aleatorio = Math.round(Math.random()*100);
+        var minum, intentos;
+
+        minum = 0;
+        intentos = 0;
+
+        do {
+            minum = prompt("Introduce un n° entre y 100: ");
+            if(aleatorio>minum){
+                alert("El número es mas alto");
+            }
+            if(aleatorio<minum){
+                alert("El número es mas bajo");
+            }
+        }while(aleatorio!=minum);
+
+        alert("CORRECTO")
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

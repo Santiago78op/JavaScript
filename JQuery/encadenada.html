@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encadena</title>
+    <style>
+        #anuncio{
+            background-color: #000;
+            color: #fff;
+            font-size: 24px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // poner a la espera el codigo web
+        $(document).ready(function() {
+            // llamada a una funcion
+            $("#anuncio").width(500).height(500).text("¡Vende!").hide().fadeIn(5000);
+        });
+    </script>
+</head>
+<body>
+    <div id="anuncio">
+        ¡Comprar!
+    </div>
+</body>
+</html>

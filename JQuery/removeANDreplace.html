@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminando y reemplazando contenido</title>
+    <style>
+        #banner{
+            background-color:#F00;
+            width: 450px;
+            height: 300px;
+            position: absolute;
+            left: 400px;
+            top: 50px;
+            font-size:36px;
+            text-align: center;
+        }
+
+        img{
+            float: left;
+            margin: 15px;
+            width: 350px;
+            height: 200px;
+        }
+
+        #imagen1,#imagen2,#imagen3,#imagen4{
+            float: left;
+            margin: 15px;
+            width: 350px;
+            height: 200px;
+            font-size:36px;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           /* let z=document.getElementById("cerrar");
+
+            z.addEventListener('click', cerrar_banner,false);*/
+            document.getElementById("cerrar").addEventListener('click', cerrar_banner,false);
+            //document.getElementById("imagen1").addEventListener('click', carrito, false);
+
+            // ? OPTIMIZAR CODIGO
+            let imagenes = document.querySelectorAll("#carrete img");
+
+            for (var i=0;imagenes.length;i++){
+                imagenes[i].addEventListener('click',carrito,false);
+            }
+        });
+
+        function cerrar_banner() {
+            $("#banner").remove();
+        }
+
+        function carrito(imagen){
+            // querySelectorAll -> selccionar todos los elementos en base a su etiqueta y los almacena en un array
+            //$("#imagen1").replaceWith("<div id='sustitucion'>Agregado al carro</div>")
+
+            // Parametros -> se creo el objeto del evento tipo e -> imagen
+            if(imagen.target ==  imagen1){
+                $("#imagen1").replaceWith("<div id='imagen1'>Agregado al carro</div>")
+            }
+            if (imagen.target ==  imagen2){
+                $("#imagen2").replaceWith("<div id='imagen2'>Agregado al carro</div>")
+            }
+            if (imagen.target ==  imagen3){
+                $("#imagen3").replaceWith("<div id='imagen3'>Agregado al carro</div>")
+            }
+            if (imagen.target ==  imagen4){
+                $("#imagen4").replaceWith("<div id='imagen4'>Agregado al carro</div>")
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="banner">
+    Banner de Prueba
+    <p id="cerrar">Cerrar</p>
+    </div>
+    <div id="carrete">
+        <img src="media/images/sad.jpg" id="imagen1">
+        <img src="media/images/eyes.jpg" id="imagen2">
+        <img src="media/images/education.png" id="imagen3">
+        <img src="media/images/bussines.png" id="imagen4">
+    </div>
+</body>
+</html>

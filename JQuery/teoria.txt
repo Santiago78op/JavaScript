@@ -1,0 +1,83 @@
+Jquery es una libreria de javascript que ayuda en la creacion
+de treas frecuentes a la hora de programar en javascript como por ejemplo:
+
+* Selecionar elementos
+* Agregar nuevo contenido
+* Ocultar y mostrar elementos de una web
+* Validacion de formularios
+* Efectos visuales
+
+Librerias que hace el mismo trabajo o parecido
+
+* Prototype
+* Mootools
+* Dojo
+* Yahoo User Interface
+
+Caracteristicas
+
+* Ligera y pequeña menos de 100kb
+* css "friendly"
+* ampliamente testeada
+* Gratis
+
+Agregar JQuery
+
+-> Enlazando a un servidor que contega la libreria
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+-> Descargando tu propia copia de JQuery
+
+    Estructura dentro del header para
+    <script src="js/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // aqui va el codigo
+    })
+    </script>
+
+* forma reducida
+
+    $(function(){
+        // aquiva el codigo
+    })
+
+
+DOM con jquery
+Modelo de Objetos del document
+
+Seleccionar Elementos
+1. document.getElementById()
+2. document.getElementByTagName()
+3. utilizando css
+-1 <p class="contacto">C/Gran via 55</p>
+    $(".contacto")
+-2 <p id="contacto">C/Gran via 55</p>
+    $("#contacto")
+-3 <p>C/Gran via 55</p>
+    $("p")
+
+Selecionando Elementos con jquery
+
+<p id="mensaje"> Esto es un mensaje para todos</p>
+- Alternativas para javascript
+
+* var el_mensaje = document.getElementById("mensaje").value;
+* var el_mensaje = $("#mesaje").value;
+
+Dos Caracteristicas
+
+* Loops automaticos
+* Funciones encadenadas
+
+// Funciones JQuery
+
+// .html() -> inserta en el html
+// .text() -> no es capaz de sustituir etiquetas html
+// .after() -> aparece despues
+// .append() -> lo agrega despues
+// .prepend() -> lo agrega antes
+// .before() -> aparece antes
+
+.remove() -> Eliminar un contenido
+.replaceWith() -> Reemplaza un contenido
